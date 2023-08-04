@@ -1,13 +1,26 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const testedNumbers = new Set();
+
+  for (let i = 0; i < array.length; i++) {
+    const complement = target - array[i];
+    if (testedNumbers.has(complement)) {
+      return true;
+    }
+    testedNumbers.add(array[i]);
+  }
+
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  
 */
 
 /* 
   Add your pseudocode here
+  1. 
 */
 
 /*
